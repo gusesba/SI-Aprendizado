@@ -1,0 +1,21 @@
+1 - Import data
+
+    Removida a coluna de id para não gerar overfitting no treinamento
+
+2 - Separar em grupo de treinamento e grupo de teste
+
+    X - Entradas, Y - Saídas, test_size - Tamanho do grupo de teste em %, random_state - seed
+
+3 - Escolher parâmetros de profundidade máxima da árvore e do mínimo de amostras para divisão
+
+4 - Montar árvore
+
+    4.1 - Escolher melhor feature para divisão
+
+      Utilizar cálculo do ganho escolhido (entropia, gini, etc) para todos os threshold possíveis de cada feature
+
+    4.2 - Separar os grupos que respeitam ou não o threshold
+
+    4.3 - Repetir processo recursivamente até encontrar um nó folha ou atingir o limites dos parâmetros escolhidos
+
+5 - Verificar com o grupo de testes 
